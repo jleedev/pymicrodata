@@ -54,6 +54,7 @@ def generate_uri(base, v):
     """
     if is_absolute_URI(v):
         return v
+    return urijoin(base, v)
 
 
 #################################################################################
