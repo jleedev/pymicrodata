@@ -195,15 +195,15 @@ class pyMicrodata:
         else:
             return name_
 
-	@staticmethod
-	def _validate_output_format(outputFormat):
-		"""
-		Malicious actors may create XSS style issues by using an illegal output format... better be careful
-		"""
-		# protection against possible malicious URL call
-		if outputFormat not in ["turtle", "n3", "xml", "pretty-xml", "nt", "json-ld"] :
-			outputFormat = "turtle"
-		return outputFormat
+    @staticmethod
+    def _validate_output_format(outputFormat):
+        """
+        Malicious actors may create XSS style issues by using an illegal output format... better be careful
+        """
+        # protection against possible malicious URL call
+        if outputFormat not in ["turtle", "n3", "xml", "pretty-xml", "nt", "json-ld"] :
+            outputFormat = "turtle"
+        return outputFormat
 
     ####################################################################################################################
     # Externally used methods
